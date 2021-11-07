@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityTerms"
+    android:background="#b3e5fc">
+
+    <ScrollView
+        android:id="@+id/scrollTerms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation= "vertical">
+
+
+           <Button
+               android:id="@+id/btn_closePageTerm"
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:layout_marginStart="332dp"
+               android:layout_marginTop="16dp"
+               android:background="@drawable/ic_close_term"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+
+           <TextView
+               android:id="@+id/tv_pageTerms_title1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="82dp"
+               android:text="Terms and Conditions"
+               android:textColor="@color/black"
+               android:textSize="32sp"
+               android:textStyle="bold"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+
+           <TextView
+               android:id="@+id/tv_pageTerms_title2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="91dp"
+               android:layout_marginTop="37dp"
+               android:text="Not  Bored"
+               android:textColor="#0088d1"
+               android:textSize="42sp"
+               android:textStyle="bold"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/tv_pageTerms_title1" />
+
+           <TextView
+               android:id="@+id/tv_pageTermsText"
+               android:layout_width="350sp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="28dp"
+               android:layout_marginTop="12dp"
+               android:text="@string/texto_terminos_y_condiciones"
+               android:textAlignment="center"
+               android:textColor="@color/black"
+               android:textSize="16sp"
+               android:textStyle="bold"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/tv_pageTerms_title2" />
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
