@@ -46,6 +46,8 @@ class ActivitySugerencia : AppCompatActivity() {
     }
 
     private fun makeCall(type : String){
+
+        binding.loadingContainer.visibility = View.VISIBLE
         CoroutineScope(Dispatchers.IO).launch {
             val llamada : APIService = getRetrofit().create(APIService::class.java)
 
@@ -70,10 +72,11 @@ class ActivitySugerencia : AppCompatActivity() {
                             else -> "High"
                         }
                     }
-
+                    binding.loadingContainer.visibility = View.GONE
                 }
                 override fun onFailure(call: Call<GetActividad>, t: Throwable) {
                     Log.i("MainActivity", t.message?: "Null message")
+                    binding.loadingContainer.visibility = View.GONE
                 }
             })
         }
