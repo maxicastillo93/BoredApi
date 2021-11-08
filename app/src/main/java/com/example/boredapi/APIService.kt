@@ -10,4 +10,7 @@ interface APIService {
 
     @GET(".")
     fun getActivityByType(@Query("type") type: String) : Call<GetActividad>
+
+    @GET(".")
+    fun getActivityRandom(): Call<GetActividad>
 }

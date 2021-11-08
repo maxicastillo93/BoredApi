@@ -28,7 +28,6 @@ class AdapterActividades(private val actividades: List<AdapterDataModel>)
 
             var intent = Intent(holder.itemView.context, ActivitySugerencia::class.java)
 
-            val activatedEnPosition = actividades[position]
             intent.putExtra("api_type", activatedEnPosition.typeModel)
             holder.itemView.context.startActivity(intent)
         }
